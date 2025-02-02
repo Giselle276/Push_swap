@@ -17,7 +17,7 @@ void	sort_two(t_stack *stack)
 	if (!stack || !stack->top || !stack->top->next)
 		return ;
 	if (stack->top->val > stack->top->next->val)
-		sa(stack);
+		ra(stack);
 }
 
 void	handle_smallest_in_middle(t_stack *a)
