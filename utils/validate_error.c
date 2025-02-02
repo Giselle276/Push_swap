@@ -14,7 +14,7 @@
 
 void	msg_error(void)
 {
-	write (1, "Error\n", 6);
+	write (2, "Error\n", 6);
 	exit (1);
 }
 
