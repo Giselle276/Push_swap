@@ -54,7 +54,7 @@ printf ${BLUE}"\n\t\t\tCONTROL ERRORS\t\n"${DEF_COLOR};
 printf ${BLUE}"\n-------------------------------------------------------------\n\n"${DEF_COLOR};
 
 ARG="a"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -72,7 +72,7 @@ fi
 rm -rf test_check.txt
 
 ARG="111a11"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -90,7 +90,7 @@ fi
 rm -rf test_check.txt
 
 ARG="hello world"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -107,7 +107,7 @@ fi
 
 rm -rf test_check.txt
 
-./push_swap "" > /dev/null 1> test_check.txt
+./push_swap "" > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -125,7 +125,7 @@ fi
 rm -rf test_check.txt
 
 ARG="0 0"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -143,7 +143,7 @@ fi
 rm -rf test_check.txt
 
 ARG="-01 -001"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -161,7 +161,7 @@ fi
 rm -rf test_check.txt
 
 ARG="111-1 2 -3"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -179,7 +179,7 @@ fi
 rm -rf test_check.txt
 
 ARG="-3 -2 -2"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -197,7 +197,7 @@ fi
 rm -rf test_check.txt
 
 ARG="\n"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -215,7 +215,7 @@ fi
 rm -rf test_check.txt
 
 ARG="-2147483649"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -233,7 +233,7 @@ fi
 rm -rf test_check.txt
 
 ARG="-2147483650"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -251,7 +251,7 @@ fi
 rm -rf test_check.txt
 
 ARG="2147483648"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -269,7 +269,7 @@ fi
 rm -rf test_check.txt
 
 ARG="8 008 12"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -287,7 +287,7 @@ fi
 rm -rf test_check.txt
 
 ARG="10 -1 -2 -3 -4 -5 -6 90 99 10"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -305,7 +305,7 @@ fi
 rm -rf test_check.txt
 
 ARG="1 +1 -1"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -323,7 +323,7 @@ fi
 rm -rf test_check.txt
 
 ARG="3333-3333 1 4"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -341,7 +341,7 @@ fi
 rm -rf test_check.txt
 
 ARG="111a111 -4 3"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -359,7 +359,7 @@ fi
 rm -rf test_check.txt
 
 ARG="111111 -4 3 03"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -377,7 +377,7 @@ fi
 rm -rf test_check.txt
 
 ARG="2147483649"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -395,7 +395,7 @@ fi
 rm -rf test_check.txt
 
 ARG="2147483647+1"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -413,7 +413,7 @@ fi
 rm -rf test_check.txt
 
 ARG="0 1 2 3 4 5 0"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -431,7 +431,7 @@ fi
 rm -rf test_check.txt
 
 ARG="3 +3"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -449,7 +449,7 @@ fi
 rm -rf test_check.txt
 
 ARG="3+3"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -467,7 +467,7 @@ fi
 rm -rf test_check.txt
 
 ARG="42 42"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -485,7 +485,7 @@ fi
 rm -rf test_check.txt
 
 ARG="42 -42 -42 "
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -503,7 +503,7 @@ fi
 rm -rf test_check.txt
 
 ARG="4222-4222"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -521,7 +521,7 @@ fi
 rm -rf test_check.txt
 
 ARG="99999999999999999999999999"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -539,7 +539,7 @@ fi
 rm -rf test_check.txt
 
 ARG="-99999999999999999999999999"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -557,7 +557,7 @@ fi
 rm -rf test_check.txt
 
 ARG="0 -0 1 -1"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -575,7 +575,7 @@ fi
 rm -rf test_check.txt
 
 ARG="0 +0 1 -1"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -593,7 +593,7 @@ fi
 rm -rf test_check.txt
 
 ARG="111+111 -4 3"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -611,7 +611,7 @@ fi
 rm -rf test_check.txt
 
 ARG="-"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -627,7 +627,7 @@ else
 fi
 
 ARG="+"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -645,7 +645,7 @@ fi
 rm -rf test_check.txt
 
 ARG="--123 1 321"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -663,7 +663,7 @@ fi
 rm -rf test_check.txt
 
 ARG="++123 1 321"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -681,7 +681,7 @@ fi
 rm -rf test_check.txt
 
 ARG="0000000000000000000000009 000000000000000000000009"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -699,7 +699,7 @@ fi
 rm -rf test_check.txt
 
 ARG="00000001 1 9 3"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -717,7 +717,7 @@ fi
 rm -rf test_check.txt
 
 ARG="00000003 003 9 1"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -735,7 +735,7 @@ fi
 rm -rf test_check.txt
 
 ARG="--21345"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -754,7 +754,7 @@ rm -rf test_check.txt
 
 
 ARG="1 01"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -772,7 +772,7 @@ fi
 rm -rf test_check.txt
 
 ARG="-000 -0000"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -790,7 +790,7 @@ fi
 rm -rf test_check.txt
 
 ARG="-00042 -000042"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -809,7 +809,7 @@ rm -rf test_check.txt
 rm -rf 0
 
 ARG="42 a 41"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -828,7 +828,7 @@ rm -rf test_check.txt
 rm -rf 0
 
 ARG="42 41 40 45 101 x 202 -1 224 3"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -847,7 +847,7 @@ rm -rf test_check.txt
 rm -rf 0
 
 ARG="42 -2 10 11 0 90 45 500 -200 e"
-./push_swap $ARG > /dev/null 1> test_check.txt
+./push_swap $ARG > /dev/null 2> test_check.txt
 if [ -s "$FICHERO" ];then
 while IFS= read -r line
 do
@@ -3615,6 +3615,21 @@ else
 fi
 
 ARG="1 2";
+N=$(./push_swap $ARG | wc -l)
+if [ $N -eq 0 ]; then
+	printf "${GREEN}6. [OK]${DEF_COLOR}";
+else
+	printf "${RED}6. [KO]${DEF_COLOR}";
+fi
+R=$(./push_swap $ARG | valgrind --leak-check=full ./checker_linux $ARG > /dev/null 2>&1)
+R=$?
+if [[ $R == 0 ]]; then
+  printf "${GREEN}[MOK] ${DEF_COLOR}\n";
+else
+  printf "${RED} [KO LEAKS] ${DEF_COLOR}\n";
+fi
+
+ARG="2 1";
 N=$(./push_swap $ARG | wc -l)
 if [ $N -eq 0 ]; then
 	printf "${GREEN}6. [OK]${DEF_COLOR}";
